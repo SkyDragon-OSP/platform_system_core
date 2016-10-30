@@ -394,6 +394,7 @@ int set_sched_policy(int tid, SchedPolicy policy)
         policy != SP_REALTIME) {
 /* END Motorola, IKJBXLINE-9555 */
         int fd;
+	int boost_fd = -1;
         switch (policy) {
         case SP_BACKGROUND:
             fd = bg_cgroup_fd;
